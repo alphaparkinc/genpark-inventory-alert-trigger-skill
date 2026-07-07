@@ -1,0 +1,44 @@
+{
+  "name": "inventory-alert-trigger-skill",
+  "version": "1.0.0",
+  "description": "Calculates safety thresholds and generates warnings when current stock levels drop near threshold levels based on daily velocity rates.",
+  "author": "alphaparkinc",
+  "category": "logistics",
+  "tags": [
+    "inventory",
+    "logistics",
+    "alert",
+    "stockout",
+    "reorder"
+  ],
+  "inputs": {
+    "current_stock": {
+      "type": "integer",
+      "description": "Current inventory quantity."
+    },
+    "daily_sales_velocity": {
+      "type": "number",
+      "description": "Average units sold per day."
+    },
+    "lead_time_days": {
+      "type": "integer",
+      "description": "Supplier restock lead time in days."
+    }
+  },
+  "outputs": {
+    "days_of_stock_left": {
+      "type": "number",
+      "description": "Estimated days until inventory is exhausted."
+    },
+    "alert_triggered": {
+      "type": "boolean",
+      "description": "True if current stock is below reorder point."
+    },
+    "reorder_point": {
+      "type": "integer",
+      "description": "Recommended stock reorder threshold level."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
