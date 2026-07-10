@@ -1,5 +1,5 @@
 {
-  "name": "inventory-alert-trigger-skill",
+  "name": "genpark-inventory-alert-trigger-skill",
   "version": "1.0.0",
   "description": "GenPark AI Agent Skill - Calculates safety thresholds and generates warnings when current stock levels drop near threshold levels based on daily velocity rates.",
   "author": "genpark",
